@@ -1,4 +1,6 @@
-# Presupuesto
+# Front end ANGULAR
+
+Esta aplicacion de angular conectará con dos rest apis una en NODE.JS y otra en Django. En este caso la app de node es sustituida por una rest api en internet, la cual se desarrollará en el futuro, pero el sentido es el mismo, esta conectada a dos back end.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
 
@@ -25,3 +27,5 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+Andrés Naranjo Jiménez
