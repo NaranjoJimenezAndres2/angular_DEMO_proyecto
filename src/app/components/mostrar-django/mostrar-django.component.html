@@ -1,0 +1,31 @@
+<div class="container mt-5" >
+    <div class = "row">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo">Listado</span>
+                    <table *ngIf="listaDjango.length > 0" class="table table-striped mt-3">
+                        <thead>
+                          <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Content</th>
+                            <th scope="col">Create at</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let lista of listaDjango">
+                            <td>{{lista.id}}</td>
+                            <td>{{lista.title}}</td>
+                            <td>{{lista.content}}</td>
+                            <td>{{lista.created_at}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <h5 style="text-align: start; margin-top:10px " *ngIf="listaDjango.length == 0" >NO hay elementos</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
