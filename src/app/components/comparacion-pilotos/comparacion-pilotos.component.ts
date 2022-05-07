@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { PruebaService } from 'src/app/services/prueba.service';
-
+import { DomSanitizer } from '@angular/platform-browser';
 @Component({
   selector: 'app-comparacion-pilotos',
   templateUrl: './comparacion-pilotos.component.html',
@@ -15,6 +15,7 @@ export class ComparacionPilotosComponent implements OnInit {
 
   constructor(private pruebaService: PruebaService,
     private aRouter: ActivatedRoute,
+    private sanitizer: DomSanitizer,
     private fb: FormBuilder) {
 
       this.comparacionForm = this.fb.group({
@@ -27,21 +28,27 @@ export class ComparacionPilotosComponent implements OnInit {
   ngOnInit(): void {
   }
 
-imgsrc='';
+imgsrc: any;
 
 
   //la funcion devuelve un png codificado en base64 para poder mostrarlo en la imagen
   getComparacion(){
     this.year = parseInt(this.comparacionForm.get('year')?.value);
     this.pruebaService.getComparacion(this.year, this.comparacionForm.get('piloto1')?.value, this.comparacionForm.get('piloto2')?.value).subscribe(
-      res => {
+     /* res => {
         console.log(res);
         window.open(URL.createObjectURL(res));
         
 
       }
     )
-  }
+  }*/
+    res => {
+      console.log(res);
+      this.imgsrc = this.sanitizer.bypassSecurityTrustResourceUrl(URL.createObjectURL(res));
+    }
+    )
+}
 
   djangoComparacion(){
     this.year = parseInt(this.comparacionForm.get('year')?.value);

@@ -11,6 +11,28 @@ import { MapaMostrarComponent } from './components/mapa-mostrar/mapa-mostrar.com
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ComparacionPilotosComponent } from './components/comparacion-pilotos/comparacion-pilotos.component';
 import { MostrarResultadosComponent } from './components/mostrar-resultados/mostrar-resultados.component';
+import { ResultadoDetalleComponent } from './components/resultado-detalle/resultado-detalle.component';
+import { LoginComponent } from './components/login/login.component';
+import { NavbarModule } from './shared/navbar/navbar.module';
+import { RegistrerComponent } from './components/registrer/registrer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+//Angular Material
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSliderModule } from '@angular/material/slider';
+import { HomeComponent } from './components/home/home.component';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatSelectModule} from '@angular/material/select';
+import { ToastrModule} from 'ngx-toastr';
+
+import {MatRadioModule} from '@angular/material/radio';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -19,7 +41,11 @@ import { MostrarResultadosComponent } from './components/mostrar-resultados/most
     MostrarDjangoComponent,
     MapaMostrarComponent,
     ComparacionPilotosComponent,
-    MostrarResultadosComponent
+    MostrarResultadosComponent,
+    ResultadoDetalleComponent,
+    LoginComponent,
+    RegistrerComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +53,24 @@ import { MostrarResultadosComponent } from './components/mostrar-resultados/most
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    NavbarModule,
+    BrowserAnimationsModule,
+    BrowserModule,
+    MatFormFieldModule,
+    MatProgressSpinnerModule,
+    MatSliderModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSnackBarModule,
+    MatIconModule,
+    MatNativeDateModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatGridListModule,
+    MatDatepickerModule,
+    ToastrModule.forRoot()
+
+    
 
   ],
   providers: [],

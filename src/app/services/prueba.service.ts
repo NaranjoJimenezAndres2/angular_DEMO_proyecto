@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -6,10 +6,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PruebaService {
-  //url = 'http://localhost:8000'; //django local
-  url='https://app-django-primera.herokuapp.com'; //django heroku
+  url = 'http://localhost:8000'; //django local
+  //url='https://app-django-primera.herokuapp.com'; //django heroku
 
-  url2= 'https://5fc9f2333c1c22001644152b.mockapi.io/api/heroresapi'; //node (rest api heroes)
+  url2= 'http://localhost:3000'; //node local
 
   constructor(private http: HttpClient) {}
 
@@ -40,7 +40,22 @@ export class PruebaService {
       return this.http.get(this.url + '/resultado');
     }
 
+    getResultadoDetalle(circuitName: string, driverId: string): Observable<any> {
+      return this.http.get(this.url + '/carreraDetalle/' + circuitName + '/' + driverId);
+    }
+
+
+    //-----NODEJS
+
+    addUser(user: any): Observable<any> {
+      return this.http.post(this.url2 + '/user', user,  { responseType: 'text' });
+    }
+
+    login(email: string , password : string): Observable<any> {
+      return this.http.post(this.url2 + '/loginUser' , { email, password }, { responseType: 'text' });
 
    }
+
+  }
   
 
