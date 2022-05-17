@@ -1,0 +1,60 @@
+<head>
+  <style type="text/css" media="screen, print">
+  @font-face {font-family: "Formula1 Display Wide"; 
+  src: url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.eot"); 
+  src: url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.eot?#iefix") format("embedded-opentype"), 
+  url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.woff2") format("woff2"), 
+  url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.woff") format("woff"), 
+  url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.ttf") format("truetype"), 
+  url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.svg#Formula1 Display Wide") format("svg"); }
+  p { font-family: "Formula1 Display Wide" }
+</style>
+</head>
+<div *ngIf="loading" class="loading" >
+ <mat-spinner color="warn" diameter="100" class="spinner"></mat-spinner>
+</div>
+<div *ngIf="!loading">
+<div *ngFor="let x of carreraResultado" class="fondo"    [style.background-image]="getBackGround(x.code)"  >
+  
+  <div class="st1 " *ngIf="x.positionOrder == 1"></div>
+    <div class="d-flex justify-content-start comp mx-4 mb-3 mb-lg-4 card1 fade-in-image" >
+        <div class="card2 justify-content-start">
+          <p>Final Position</p>
+          <br>
+          <p>Points</p>
+          <br>
+          <p>Nationality</p>
+          <br>
+          <p>Overtakes</p>
+          <br>
+          <p>Fastest Lap</p>
+          <br>
+          <p>Status</p>
+          <br>
+          <p>Constructor Team</p>
+          <br>
+          
+        </div>
+        <div class="card3 justify-content-end">
+          <p *ngIf="x.positionOrder != 0">{{x.positionOrder}}</p><p *ngIf="x.positionOrder == 0">Non-Qualified </p>
+          <br>
+          <p>{{x.points}}</p>
+          <br>
+          <p>{{x.nationality}}</p>
+          <br>
+          <p> <i class="fa-solid fa-dash fa-1.5x"></i>
+            <i *ngIf="x.overtake < 0" class="fa-solid fa-chevron-down  fa-1.5x"></i>
+            <i *ngIf="x.overtake > 0" class="fa-solid fa-angle-up  fa-1.5x"></i>
+            &nbsp; {{x.overtake}}</p>
+          <br>
+          <p>{{x.lapFast}}</p>
+          <br>
+          <p>{{x.status}}</p>
+          <br>
+          <p>{{x.constructorName}}</p>
+          <br>
+      </div>
+
+</div>
+</div>
+       

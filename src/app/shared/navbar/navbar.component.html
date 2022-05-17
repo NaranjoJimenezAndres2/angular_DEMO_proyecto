@@ -1,0 +1,49 @@
+<header style="background-color:red">
+<nav class="navbar navbar-expand-lg nav-mobile-wrapper navbar-inverse bg-inverse" >
+  <img class="fit-image" src="https://www.formula1.com/etc/designs/fom-website/images/f1_logo.svg
+  " width="100px" height="35px">
+  <button style="background-color:aliceblue" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <div class="collapse navbar-collapse d-flex justify-content-md-center" id="navbarNavDropdown">
+      <ul class="navbar-nav " >
+        <li class="nav-item active">
+          <a class="nav-link"   [routerLink]="['/carreras']">Resultados <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link"  [routerLink]="['/telemtria']">Telemetria</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link"  [routerLink]="['/mapa']">Mapa</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link"  [routerLink]="['/mostrarCarreras']">MostrarCarreras</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link"  [routerLink]="['/comparacionPilotos']">ComparacionPilotos</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" [routerLink]="['/prueba']">Prueba</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" [routerLink]="['/login']">carreraDetalle</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown link
+          </a>
+        </li> 
+        <li  class="nav-item d-flex justify-content-md-end">
+          <a class="nav-link " style="cursor:pointer"  [routerLink]="['/login']">Login</a>
+        </li>
+        <li *ngIf="variable" class="nav-item  d-flex"  >
+          <a class="nav-link" style="cursor:pointer" (click)="logout()">Log out</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

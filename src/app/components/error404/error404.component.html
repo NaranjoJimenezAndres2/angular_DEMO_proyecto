@@ -1,0 +1,42 @@
+<head>
+    <style type="text/css" media="screen, print">
+        @font-face {
+            font-family: "Formula1 Display Wide";
+            src: url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.eot");
+            src: url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.eot?#iefix") format("embedded-opentype"),
+                url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.woff2") format("woff2"),
+                url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.woff") format("woff"),
+                url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.ttf") format("truetype"),
+                url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.svg#Formula1 Display Wide") format("svg");
+        }
+
+        p {
+            font-family: "Formula1 Display Wide"
+        }
+    </style>
+</head>
+
+<div class="container ">
+
+   <div class="prueba">
+
+        <div class="col-md-12">
+            <div>
+                <h1 style="font-family:Formula1 Display Wide ; font-size: 50px; ">
+                    Oops!</h1>
+                <h2 style="font-family:Formula1 Display Wide ;">
+                    404 Not Found</h2>
+                <div>
+                    Sorry, you must be logged to access to this content.
+                </div>
+                <br>
+                <div>
+                    <a [routerLink]="['/login']">
+                        <button *ngIf="button"  button class="ancho fade-in-image" mat-raised-button color="warn" style="position: absolute; z-index : 999">
+                            Login
+                        </button>
+                    </a>
+            </div>
+        </div>
+    </div>
+</div> 

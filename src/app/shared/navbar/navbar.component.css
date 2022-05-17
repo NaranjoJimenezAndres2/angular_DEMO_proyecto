@@ -1,0 +1,25 @@
+
+
+.nav-link {
+    color: #fff;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    
+}
+
+.nav-link:hover {
+    color: #c9c1c1;
+    background-color: rgba(95, 82, 66, 0.69);
+
+
+}
+
+.right {
+    float : right;
+    margin-left: 480px;
+}
+
+.navbar-toggler-icon {
+    background-color:black
+    }

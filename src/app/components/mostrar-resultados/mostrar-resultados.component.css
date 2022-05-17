@@ -1,0 +1,105 @@
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 1%;
+    border: 1px solid rgb(253, 5, 5);
+    border-radius: 5px;
+    background-color: rgb(132, 123, 123);
+    width: 60%;
+    height: auto;
+    float: left;
+    margin-left: 20%;
+}
+    
+
+.card2 {
+    background: url('https://http2.mlstatic.com/replicas-cuadros-omar-rayo-50-x-50-cms-D_NQ_NP_932321-MCO20729339878_052016-F.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #03fe0cf6;
+    box-shadow: black 0px 0px 10px;
+    border-radius: 10px;
+    border-color: #131313;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 2%;
+  }
+
+
+  .celda {
+    background-color: #323232;
+    color: greenyellow;
+    box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+    border-radius: 10px;
+    border-color: greenyellow;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+
+  
+  
+  }
+
+
+  .wrapper{ 
+
+    width:100%; 
+    overflow-y:scroll; 
+    position:relative;
+    height: 75vh;
+}
+
+  .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+    background-color: rgba(14, 15, 14, 0.547);
+    color : rgb(211, 22, 22);
+  }
+
+.principal{
+    background-color:#56515196;
+    color: rgb(210, 210, 210)
+}
+
+table.classname td { display:block; width:100% !important; }
+
+
+
+/*  *video de fondo*/
+video {
+    /** Simulationg background-size: cover */
+    object-fit: cover;
+    height: 92.5vh;
+    width: 100%;
+  
+    position: absolute;
+
+  }
+  .video-wrapper {
+    /* Telling our absolute positioned video to 
+    be relative to this element */
+    position: relative;
+  
+    width: 400px;
+    height: 200px;
+  
+    /* Will not allow the video to overflow the 
+    container */
+    overflow: hidden;
+  
+    /* Centering the container's content vertically 
+    and horizontally */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .titulo{
+    font-size: 30px;
+    color :rgb(228, 222, 222);
+    height: 100px;
+  }
+
+
