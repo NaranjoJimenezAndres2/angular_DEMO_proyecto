@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { isSameMultiYearView } from '@angular/material/datepicker/multi-year-view';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-mostrar-resultados',

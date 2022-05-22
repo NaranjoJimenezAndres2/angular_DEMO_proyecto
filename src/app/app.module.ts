@@ -17,6 +17,8 @@ import { LoginComponent } from './components/login/login.component';
 import { NavbarModule } from './shared/navbar/navbar.module';
 import { RegistrerComponent } from './components/registrer/registrer.component';
 import { PruebaComponent } from './components/prueba/prueba.component';
+import { DialogComponent } from './components/dialog/dialog.component';
+import { HomeComponentModule } from './components/home/carousel-basic.module';
 
 //Angular Material
 import { MatInputModule } from '@angular/material/input';
@@ -24,7 +26,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSliderModule } from '@angular/material/slider';
-import { HomeComponent } from './components/home/home.component';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -40,6 +41,12 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { CookieService } from 'ngx-cookie-service';
 import { JwtInterceptorInterceptor } from './interceptor/jwt-interceptor.interceptor';
 import { Error404Component } from './components/error404/error404.component';
+import { MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
+import { MatTableModule } from '@angular/material/table';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+
+
 
 
 @NgModule({
@@ -53,9 +60,11 @@ import { Error404Component } from './components/error404/error404.component';
     ResultadoDetalleComponent,
     LoginComponent,
     RegistrerComponent,
-    HomeComponent,
+
     PruebaComponent,
-    Error404Component
+    Error404Component,
+    DialogComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -79,12 +88,19 @@ import { Error404Component } from './components/error404/error404.component';
     MatGridListModule,
     MatDatepickerModule,
     MatSlideToggleModule,
-    ToastrModule.forRoot()
+    MatDialogModule,
+    MatTableModule,
+    ToastrModule.forRoot(),
+    NgbModule,
+    HomeComponentModule
 
     
 
   ],
-  providers: [{provide: HTTP_INTERCEPTORS, useClass: JwtInterceptorInterceptor, multi: true} ,CookieService ],
+  entryComponents: [DialogComponent], //dialogo
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: JwtInterceptorInterceptor, multi: true} 
+    ,CookieService , 
+    {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

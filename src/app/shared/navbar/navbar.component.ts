@@ -12,6 +12,8 @@ import { CookieService } from 'ngx-cookie-service';
 export class NavbarComponent implements OnInit {
 
   variable= false;
+  collapsed = true;
+
 
   constructor(private setCookie: CookieService, private _snackBar: MatSnackBar, private router: Router) { }
 
@@ -25,6 +27,12 @@ this.ifExistsCookies();
     } 
   }
 
+
+  toggleCollapsed(): void {
+    this.collapsed = !this.collapsed;
+  }
+
+  
   logout(){
     //destruimos la cookie
     this.setCookie.delete('token');

@@ -45,6 +45,10 @@ export class PruebaService {
       return this.http.get(this.url + '/carreraDetalle/'+ year + '/' + circuitName + '/' + driverId);
     }
 
+    getPilotos(year:number): Observable<any> {
+      return this.http.get(this.url + '/getPilotos/' + year);
+    }
+
 
     //-----NODEJS
 

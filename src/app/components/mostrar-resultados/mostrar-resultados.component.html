@@ -12,7 +12,7 @@
 </head>
 
 
-<div class="container card2 mt-5" *ngIf="variableAno">
+<div class="container card2" *ngIf="variableAno">
 
 
   <form class="mt-3" [formGroup]="yearForm" (ngSubmit)="obtenerResultado()">
@@ -38,8 +38,8 @@
         <option *ngFor="let x of nombre" [ngValue]="x">{{x}}</option>
       </select>
     </div>
-    <div *ngIf="botton" class="mb-3">
-      <button type="submit"  [disabled] = "yearForm.invalid" class="button-49" style="margin-left:530px">Enviar</button>
+    <div *ngIf="botton" class="mb-3 d-flex justify-content-center">
+      <button type="submit"  [disabled] = "yearForm.invalid" class="button-49" >Enviar</button>
     </div>
   </form>
 

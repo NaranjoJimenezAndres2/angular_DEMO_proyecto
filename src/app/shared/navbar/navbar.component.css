@@ -1,5 +1,7 @@
 
 
+
+
 .nav-link {
     color: #fff;
     font-weight: bold;
@@ -9,10 +11,14 @@
 }
 
 .nav-link:hover {
-    color: #c9c1c1;
+    color: #12f602;
     background-color: rgba(95, 82, 66, 0.69);
 
 
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: aliceblue;
 }
 
 .right {
