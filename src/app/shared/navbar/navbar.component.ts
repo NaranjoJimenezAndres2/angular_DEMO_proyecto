@@ -11,6 +11,8 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class NavbarComponent implements OnInit {
 
+  
+
   variable= false;
   collapsed = true;
 
@@ -24,6 +26,7 @@ this.ifExistsCookies();
   ifExistsCookies(){
     if (this.setCookie.check('token')) {
       this.variable= true;
+
     } 
   }
 
@@ -39,7 +42,7 @@ this.ifExistsCookies();
     this._snackBar.open('Log out successed', 'Success', {
       duration: 4000,
       horizontalPosition: 'center',
-      verticalPosition: 'top'
+      verticalPosition: 'bottom'
     })
     this.router.navigate(['']);
     //recargar la pagina
@@ -47,5 +50,7 @@ this.ifExistsCookies();
 
 
 }
+
+
 
 }

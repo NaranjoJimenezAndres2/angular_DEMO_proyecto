@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 92.5vh;
     background: #870000; /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #870000, #190a05); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #870000, #190a05); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */

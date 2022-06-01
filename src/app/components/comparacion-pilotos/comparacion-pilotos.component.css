@@ -108,19 +108,10 @@
   background-color: black;
   padding: 20px;
   float : left;
+  margin-top: 100px;
   margin-top: 50px;
   border: #FF013C solid 1px;
   border-radius: 10px;
-  width: 100%;
-  
-
-}
-
-.toggle{
-  background-color: black;
-  padding-top: 150px;
-  width: 100%;
-  height: 15vh;
 }
 
 
@@ -129,8 +120,8 @@ aside {
     background-color: black;
     padding: 10px;
     float : left;
-    height: 100vh;
-    width: 21%;
+    height: 92.5vh;
+    width: 20%;
 }
 
 .celda {
@@ -154,8 +145,8 @@ aside {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 79%;
-  height: 100vh;
+  width: 80%;
+  height: 92.5vh;
   float: right;
   padding: 5%;
 

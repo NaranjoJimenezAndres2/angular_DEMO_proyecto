@@ -6,11 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PruebaService {
-  //url = 'http://localhost:8000'; //django local
-  url='https://app-django-datavisualization.herokuapp.com'; //django heroku
+  url = 'http://localhost:8000'; //django local
+  //url='https://app-django-datavisualization.herokuapp.com'; //django heroku
 
-  //url2= 'http://localhost:3000'; //node local
-  url2= 'https://app-backend-nodej.herokuapp.com'; //node heroku
+  url2= 'http://localhost:3000'; //node local
+  //url2= 'https://app-backend-nodej.herokuapp.com'; //node heroku
 
   constructor(private http: HttpClient) {}
 
@@ -48,6 +48,18 @@ export class PruebaService {
     getPilotos(year:number): Observable<any> {
       return this.http.get(this.url + '/getPilotos/' + year);
     }
+
+   getTelemetria (piloto1: string, piloto2: string, gp : string, year: string): Observable<any> {
+    return this.http.get(this.url + '/telemetria/' + piloto1 + '/' + piloto2 + '/' + gp + '/' + year, { responseType: 'blob' });
+  }
+
+  getTelemetriaOnlyOne (piloto1: string, gp : string, year: string): Observable<any> {
+    return this.http.get(this.url + '/telemetria/' + piloto1 + '/' + gp + '/' + year, { responseType: 'blob' });
+  }
+
+  getEstrategia (piloto1: string, gp : string, year: string): Observable<any>{
+    return this.http.get(this.url + '/stints/' + piloto1 + '/' + gp + '/' + year);
+  }
 
 
     //-----NODEJS

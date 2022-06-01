@@ -1,0 +1,92 @@
+.subheader{
+    width: 100%;
+    height: 100px;
+    background-color: whitesmoke;
+    margin-top:50px;
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 20.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+}
+
+.classFlag{
+    width: 10%;
+    height: 30px;
+    float: left;
+    padding-left: 20px;
+    margin-top: 35px;
+}
+
+.clockBorder{
+    width: 20%;
+    height: 55px;
+    float: right;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border: 1px solid #ccc;
+
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.clockInside{
+    width: 80%;
+    height: 100%;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: rgb(135, 134, 134);
+    float:left;
+    
+}
+
+.clockHours{
+    width: 33%;
+    font-size : 15px;
+    font-style: bold;
+    font-family: "Formula1 Display Wide";
+    border-right: 1px solid rgb(0, 0, 0);
+    height: 100%;
+    float:left;
+    padding-left:15px;
+    padding-top: 15px;
+}
+
+.clockSeconds{
+    width: 33%;
+    height: 100%;
+    font-size : 15px;
+    font-style: bold;
+    font-family: "Formula1 Display Wide";
+    float:left;
+    padding-left:15px;
+    padding-top: 15px;
+
+}
+
+
+.clockImage{
+    width: 20%;
+    height: 100%;
+    float:left;
+    background-image: url("https://goldbusinesstemuco.files.wordpress.com/2015/08/rolex-logo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+.titulo{
+    width: 60%;
+    background-color: whitesmoke;
+    margin-top:40px;
+    float: left;
+    font-size: 20px;
+    padding-left: 160px;}

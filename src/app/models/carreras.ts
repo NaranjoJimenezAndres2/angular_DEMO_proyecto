@@ -1,5 +1,6 @@
 export class Carrera {
     private _name: string;
+    private _name2: string;
     private _date: string;
     private _circuitName: string;
     private _number: string;
@@ -19,7 +20,8 @@ export class Carrera {
     private _overtake:number;
     private _lapFast:string;
     
-    constructor(name:string, 
+    constructor(name:string,
+        name2:string,
         date: string, 
         circuitName: string,
         number: string, 
@@ -40,6 +42,7 @@ export class Carrera {
         lapFast:string) 
         {
         this._name = name;
+        this._name2= name2
         this._date = date;
         this._circuitName = circuitName;
         this._number = number;
@@ -64,6 +67,11 @@ export class Carrera {
     get name () {
         return this._name;
     }
+
+    get name2 () {
+        return this._name2;
+    }
+
 
     get number () {
         return this._number;
@@ -139,14 +147,14 @@ export class Carrera {
 }
 
 export class nombreCircuitos{
-    private _name: string;
+    private _name2: string;
 
-    constructor(name:string) {
-        this._name = name;
+    constructor(name2:string) {
+        this._name2 = name2;
     }
 
-    get name () {
-        return this._name;
+    get name2 () {
+        return this._name2;
     }
 }
 

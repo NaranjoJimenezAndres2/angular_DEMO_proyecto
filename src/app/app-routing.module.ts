@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { MostrarDjangoComponent } from './components/mostrar-django/mostrar-django.component';
-import { MostrarListaComponent } from './components/mostrar-lista/mostrar-lista.component';
 import { MapaMostrarComponent } from './components/mapa-mostrar/mapa-mostrar.component';
 import { ComparacionPilotosComponent } from './components/comparacion-pilotos/comparacion-pilotos.component';
 import { MostrarResultadosComponent } from './components/mostrar-resultados/mostrar-resultados.component';
@@ -13,11 +11,11 @@ import { HomeComponent } from './components/home/home.component';
 import { UserGuardGuard } from './guard/user-guard.guard';
 import { PruebaComponent } from './components/prueba/prueba.component';
 import { Error404Component } from './components/error404/error404.component';
+import { TelemetriaComponent } from './components/telemetria/telemetria.component';
+import { EstrategiaComponent } from './components/estrategia/estrategia.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'django' , component : MostrarDjangoComponent},
-  { path: 'node' , component : MostrarListaComponent},
   { path: 'mapa' , component : MapaMostrarComponent},
   { path: 'comparacionPilotos' , component : ComparacionPilotosComponent},
   { path: 'carreras' , component : MostrarResultadosComponent},
@@ -25,7 +23,9 @@ const routes: Routes = [
   { path: 'login' , component : LoginComponent},
   { path: 'registrer' , component : RegistrerComponent},
   { path: 'prueba' , component : PruebaComponent, canActivate: [UserGuardGuard]},
-  { path: '404-non-found', component : Error404Component}
+  { path: '404-non-found', component : Error404Component},
+  { path: 'telemetria', component : TelemetriaComponent},
+  { path: 'estrategia', component: EstrategiaComponent }
 ];
 
 @NgModule({

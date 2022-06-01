@@ -1,22 +1,74 @@
+<head>
+  <style type="text/css" media="screen, print">
+    @font-face {
+      font-family: "Formula1 Display Wide";
+      src: url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.eot");
+      src: url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.eot?#iefix") format("embedded-opentype"),
+        url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.woff2") format("woff2"),
+        url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.woff") format("woff"),
+        url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.ttf") format("truetype"),
+        url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.svg#Formula1 Display Wide") format("svg");
+    }
+
+    p {
+      font-family: "Formula1 Display Wide"
+    }
+  </style>
+</head>
+
+
+<div class="subheader">
+
+  <div>
+    <img class="classFlag" src="{{flag}}" width="50" height="50">
+  </div>
+
+  <div class="titulo">
+    <p>FORMULA ONE WEB APPLICATION</p>
+  </div>
+
+  <div class="clockBorder">
+    <div class="clockInside">
+      <div class="clockHours">{{hh}}</div>
+      <div class="clockHours">{{mm}}</div>
+      <div class="clockSeconds">{{ss}}</div>
+    </div>
+
+
+    <div class="clockImage" >
+    </div>
+  </div>
+</div>
 
 <div>
-<ngb-carousel class="carousel-item" *ngIf="images ">
-    <ng-template ngbSlide  class="carousel-item" >
-      <div class="picsum-img-wrapper" style="margin-left: 480px; height:400px; margin-top: 120px;">
-         <a href="https://app-formulauno.herokuapp.com/f1/dashboard/mostrarPersonal/ALP" > 
-        <button class="btn green"><img [src]="images[0]" width="250px" height="190px" alt="Random first slide"></button></a>
+  <ngb-carousel>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper" style="height: 95vh; opacity:0.7">
+        <img
+          src="https://media.gettyimages.com/photos/max-verstappen-of-the-netherlands-and-oracle-red-bull-racing-and-picture-id1390606101?s=2048x2048">
       </div>
-    </ng-template>
-    <ng-template ngbSlide class="carousel-item" >
-      <div class="picsum-img-wrapper"style="margin-left:430px ;margin-top: 120px; height:400px;" >
-        <a href="https://app-formulauno.herokuapp.com/f1/dashboard/mostrarPersonal/FER" >
-          <button class="btn green"><img [src]="images[1]" width="350px" height="180px" alt="Random second slide"></button></a>
+      <div class="carousel-caption">
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
       </div>
     </ng-template>
     <ng-template ngbSlide>
-      <div class="picsum-img-wrapper"style="margin-left: 400px ;margin-top: 170px; height:400px;" >
-        <a href="https://app-formulauno.herokuapp.com/f1/dashboard/mostrarPersonal/MER" >
-          <button class="btn green"><img [src]="images[2]" width="400px" height="104px" alt="Random second slide"></button></a>
+      <div class="picsum-img-wrapper" style="height: 95vh; opacity:0.7">
+        <img
+          src="https://media.gettyimages.com/photos/fernando-alonso-alpine-f1-team-a521-renault-etech-20-engine-during-picture-id1357697942?s=2048x2048"
+          alt="Random second slide">
+      </div>
+      <div class="carousel-caption">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper" style="height: 95vh; opacity:0.7">
+        <img
+          src="https://media.gettyimages.com/photos/pole-position-qualifier-charles-leclerc-of-monaco-and-ferrari-in-picture-id1395968633?s=2048x2048"
+          alt="Random third slide">
+      </div>
+      <div class="carousel-caption">
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
       </div>
     </ng-template>
   </ngb-carousel>

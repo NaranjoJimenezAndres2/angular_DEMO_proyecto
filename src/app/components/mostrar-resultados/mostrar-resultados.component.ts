@@ -5,7 +5,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { isSameMultiYearView } from '@angular/material/datepicker/multi-year-view';
-import {MatDialogModule} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-mostrar-resultados',
@@ -59,7 +58,7 @@ yearForm: FormGroup;
         )
       console.log(this.nombreCircuitos)
       for (let i = 0; i < this.nombreCircuitos.length; i++) {  //paso de un JSON a un array simple
-        this.nombre.push(this.nombreCircuitos[i].name)
+        this.nombre.push(this.nombreCircuitos[i].name2)
 
 
   }

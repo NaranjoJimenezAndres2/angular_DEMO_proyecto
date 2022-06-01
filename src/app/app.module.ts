@@ -6,8 +6,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //Componentes
-import { MostrarListaComponent } from './components/mostrar-lista/mostrar-lista.component';
-import { MostrarDjangoComponent } from './components/mostrar-django/mostrar-django.component';
 import { MapaMostrarComponent } from './components/mapa-mostrar/mapa-mostrar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ComparacionPilotosComponent } from './components/comparacion-pilotos/comparacion-pilotos.component';
@@ -18,7 +16,7 @@ import { NavbarModule } from './shared/navbar/navbar.module';
 import { RegistrerComponent } from './components/registrer/registrer.component';
 import { PruebaComponent } from './components/prueba/prueba.component';
 import { DialogComponent } from './components/dialog/dialog.component';
-import { HomeComponentModule } from './components/home/carousel-basic.module';
+import { HomeComponentModule } from './components/home/home.component.module';
 
 //Angular Material
 import { MatInputModule } from '@angular/material/input';
@@ -44,26 +42,27 @@ import { Error404Component } from './components/error404/error404.component';
 import { MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
-
+import { TelemetriaComponent } from './components/telemetria/telemetria.component';
+import { EstrategiaComponent } from './components/estrategia/estrategia.component';
+import { HighchartsChartComponent, HighchartsChartModule } from 'highcharts-angular';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MostrarListaComponent,
-    MostrarDjangoComponent,
     MapaMostrarComponent,
     ComparacionPilotosComponent,
     MostrarResultadosComponent,
     ResultadoDetalleComponent,
     LoginComponent,
     RegistrerComponent,
-
     PruebaComponent,
     Error404Component,
     DialogComponent,
+    TelemetriaComponent,
+    EstrategiaComponent
+
 
   ],
   imports: [
@@ -92,7 +91,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatTableModule,
     ToastrModule.forRoot(),
     NgbModule,
-    HomeComponentModule
+    HomeComponentModule,
+    HighchartsChartModule
+
 
     
 
@@ -104,3 +105,4 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
