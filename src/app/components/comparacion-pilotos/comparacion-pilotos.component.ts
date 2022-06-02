@@ -4,6 +4,8 @@ import { ActivatedRoute } from '@angular/router';
 import { PruebaService } from 'src/app/services/prueba.service';
 import { DomSanitizer } from '@angular/platform-browser';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { DialogComponent } from '../dialog/dialog.component';
 
 
 
@@ -13,14 +15,15 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
   styleUrls: ['./comparacion-pilotos.component.css']
 })
 export class ComparacionPilotosComponent implements OnInit {
-  isChecked = true;
+  isChecked = false;
   comparacionForm: FormGroup;
   year : number = 0;
 
   constructor(private pruebaService: PruebaService,
     private aRouter: ActivatedRoute,
     private sanitizer: DomSanitizer,
-    private fb: FormBuilder) {
+    private fb: FormBuilder,
+    public dialog: MatDialog) {
 
       this.comparacionForm = this.fb.group({
         year : ['', Validators.required],
@@ -65,6 +68,28 @@ imgsrc: any;
       }
     )
     }
+
+  openDialog(): void {
+    const year = parseInt(this.comparacionForm.get('year')?.value);
+
+    const dialogConfig = new MatDialogConfig();
+
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = '15%';
+    dialogConfig.maxHeight = 400;
+    dialogConfig.data = {
+      year: year
+    };
+
+console.log(dialogConfig.data);
+
+    const dialogRef = this.dialog.open(DialogComponent, dialogConfig);
+ 
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
 
 
 }

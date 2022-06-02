@@ -48,10 +48,10 @@
                               
         </form>   
     </div><div class="toggle">
-                <mat-slide-toggle [(ngModel)]="isChecked">Slide Toggle Checked: {{isChecked}}</mat-slide-toggle>
+                <mat-slide-toggle style="font-family: Formula1 Display Wide" [(ngModel)]="isChecked">Press to show assistance</mat-slide-toggle>
             </div>
-            <div class="button">
-            <button mat-raised-button color="warn">Open Aid</button>
+            <div class="button" *ngIf="isChecked">
+            <button mat-raised-button style="font-family: Formula1 Display Wide;" (click)="openDialog()" color="warn">Open Aid</button>
         </div> 
 </aside>
 

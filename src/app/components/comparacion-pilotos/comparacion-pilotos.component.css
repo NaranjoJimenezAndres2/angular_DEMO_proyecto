@@ -128,7 +128,9 @@ aside {
 .toggle{
 
 display: block;
-color : whitesmoke
+color : whitesmoke;
+padding-left:20px;
+font-family: "Formula1 Display Wide";
 
 }
 
@@ -136,6 +138,7 @@ color : whitesmoke
   width: 80px;
   text-align: center;
   margin-top: 30px;
+  padding-left:20px
 }
 
 
