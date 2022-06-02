@@ -21,9 +21,8 @@ export class NavbarComponent implements OnInit {
   constructor(private setCookie: CookieService, private _snackBar: MatSnackBar, private router: Router, private authSrv: AuthServiceService) { }
 
   ngOnInit(): void {
-//this.ifExistsCookies();
-  
-debugger;
+
+
 this.authSrv.trigger.subscribe(
   (data: any) => {
     console.log(data);
@@ -32,14 +31,6 @@ this.authSrv.trigger.subscribe(
 
   }
 
-
-
-  ifExistsCookies(){
-    if (this.setCookie.check('token')) {
-      this.variable= true;
-
-    } 
-  }
 
 
   toggleCollapsed(): void {

@@ -118,3 +118,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
 }
 
+
+input:focus { 
+  outline: none !important;
+  border-color: red;
+  box-shadow: 0 0 10px red;
+}
+
