@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
+import { AuthServiceService } from 'src/app/auth/auth-service.service';
 
 @Component({
   selector: 'app-navbar',
@@ -17,11 +18,21 @@ export class NavbarComponent implements OnInit {
   collapsed = true;
 
 
-  constructor(private setCookie: CookieService, private _snackBar: MatSnackBar, private router: Router) { }
+  constructor(private setCookie: CookieService, private _snackBar: MatSnackBar, private router: Router, private authSrv: AuthServiceService) { }
 
   ngOnInit(): void {
-this.ifExistsCookies();
+//this.ifExistsCookies();
+  
+debugger;
+this.authSrv.trigger.subscribe(
+  (data: any) => {
+    console.log(data);
+    this.variable = data;
+  });
+
   }
+
+
 
   ifExistsCookies(){
     if (this.setCookie.check('token')) {
@@ -44,9 +55,9 @@ this.ifExistsCookies();
       horizontalPosition: 'center',
       verticalPosition: 'bottom'
     })
+    this.variable= false;
     this.router.navigate(['']);
-    //recargar la pagina
-    location.reload();
+
 
 
 }

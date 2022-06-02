@@ -13,7 +13,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
   styleUrls: ['./comparacion-pilotos.component.css']
 })
 export class ComparacionPilotosComponent implements OnInit {
-
+  isChecked = true;
   comparacionForm: FormGroup;
   year : number = 0;
 

@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { PruebaService } from 'src/app/services/prueba.service';
 import { CookieService } from 'ngx-cookie-service';
+import { AuthServiceService } from 'src/app/auth/auth-service.service';
 
 @Component({
   selector: 'app-login',
@@ -11,12 +12,14 @@ import { CookieService } from 'ngx-cookie-service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  var = true
   formLogin: FormGroup;
   loading = false;
   hide = true;
  
 
-  constructor(private fb: FormBuilder, private _snackBar: MatSnackBar, private router: Router, private pruebaService: PruebaService, private cookieService: CookieService) {
+  constructor(private fb: FormBuilder, private _snackBar: MatSnackBar, private router: Router, 
+    private pruebaService: PruebaService, private cookieService: CookieService, private authSrv: AuthServiceService) {
     this.formLogin = this.fb.group({
       email: ['', Validators.required],
       password: ['', Validators.required]
@@ -48,12 +51,12 @@ export class LoginComponent implements OnInit {
       //recibir el token jwt desde el servidor y continuar.
       (data: any) => {
         console.log(data);
-        
+        debugger
         if (data != 'error') {
           this.cookieService.set('token', data);
           console.log(this.cookieService.get('token'));
+          this.authSrv.trigger.emit(this.var);
           this.router.navigate(['']);
-          location.reload();  //recargamos la pagina para aplicar los cambios de la cookie
         } else {
           this.error();
           this.formLogin.reset(); //limpiamos el formulario

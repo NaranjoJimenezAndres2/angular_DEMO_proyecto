@@ -1,22 +1,27 @@
 <head>
     <style type="text/css" media="screen, print">
-    @font-face {font-family: "Formula1 Display Wide"; 
-    src: url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.eot"); 
-    src: url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.eot?#iefix") format("embedded-opentype"), 
-    url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.woff2") format("woff2"), 
-    url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.woff") format("woff"), 
-    url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.ttf") format("truetype"), 
-    url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.svg#Formula1 Display Wide") format("svg"); }
-    p { font-family: "Formula1 Display Wide" }
-  </style>
-  </head>
+        @font-face {
+            font-family: "Formula1 Display Wide";
+            src: url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.eot");
+            src: url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.eot?#iefix") format("embedded-opentype"),
+                url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.woff2") format("woff2"),
+                url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.woff") format("woff"),
+                url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.ttf") format("truetype"),
+                url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.svg#Formula1 Display Wide") format("svg");
+        }
+
+        p {
+            font-family: "Formula1 Display Wide"
+        }
+    </style>
+</head>
 
 <aside class="">
     <div class="d-flex justify-content-center comp mx-4 mb-3 mb-lg-4">
-        <form class="mt-3"  [formGroup]="comparacionForm" (ngSubmit)="getComparacion()">
+        <form class="mt-3" [formGroup]="comparacionForm" (ngSubmit)="getComparacion()">
             <div class="mb-3">
-                <input type="text" class="form-control text-center celda" id="year" formControlName="year" autocomplete="null"
-                    placeholder="Año del campeonato">
+                <input type="text" class="form-control text-center celda2" id="year" formControlName="year"
+                    autocomplete="null" placeholder="Year">
                 <div class="text-danger"
                     *ngIf="comparacionForm.get('year')?.hasError('required') && comparacionForm.get('year')?.touched">
                     <span>El año es <b>requerido</b></span>
@@ -24,34 +29,35 @@
                 <br>
 
                 <div class="mb-3">
-                    <input type="text" class="form-control text-center celda" id="nombre" formControlName="piloto1"
-                        autocomplete="null" placeholder="Primer Piloto">
+                    <input type="text" class="form-control text-center celda2" id="nombre" formControlName="piloto1"
+                        autocomplete="null" placeholder="1st Driver">
                 </div>
-                <mat-slide-toggle 
-                ngModel name="enableGet"
-                color="warn"
-                disabled="disabled"
-                ></mat-slide-toggle>
+
 
                 <div class="mb-3">
-                    <input type="text" class="form-control text-center celda" id="pais" formControlName="piloto2"
-                        autocomplete="null" placeholder="Segundo Piloto">
+                    <input type="text" class="form-control text-center celda2" id="pais" formControlName="piloto2"
+                        autocomplete="null" placeholder="2nd Driver">
                 </div>
 
                 <div class="mb-3">
                     <button type="submit" [disabled]="comparacionForm.invalid"
-                        class="btn button-49 float-end">GO</button>
+                        class="btn button-49 float-end" style="font-family: Formula1 Display Wide">GO</button>
                 </div>
 
+              </div>
+                              
+        </form>   
+    </div><div class="toggle">
+                <mat-slide-toggle [(ngModel)]="isChecked">Slide Toggle Checked: {{isChecked}}</mat-slide-toggle>
             </div>
-        </form>
-
-    </div>
-    <br>
+            <div class="button">
+            <button mat-raised-button color="warn">Open Aid</button>
+        </div> 
 </aside>
+
 
 <div id="imagen">
 
-<img *ngIf="imgsrc" [src]="imgsrc" />
+    <img *ngIf="imgsrc" [src]="imgsrc" />
 
 </div>
