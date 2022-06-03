@@ -1,1 +1,49 @@
-<p>telemetria works!</p>
+
+
+
+<div class=" d-flex justify-content-center" style="margin-top:100px">
+    <form class="mt-3" [formGroup]="telemetriaForm" (ngSubmit)="obtenerTelemetria()">
+    
+        <div class="mb-3 insideIcons">
+
+            <input type="text" class="form-control celda" id="year" formControlName="year" autocomplete="null"
+                placeholder="Año del campeonato">
+
+
+            <i (click)="obtenerYear()" class="fa fa-refresh fa-fw  icon fa-1x" aria-hidden="true" style="cursor:pointer"></i>
+        </div>
+        <div class="mb-3">
+            <select formControlName="nombreCircuitos" class="form-control celda">
+                <option value="" disabled selected>Seleccione un Circuito</option>
+                <option *ngFor="let x of nombre" [ngValue]="x">{{x}}</option>
+            </select>
+        </div>
+        
+        <div class="mb-3">
+            <input type="text" class="form-control text-center celda" id="nombre" formControlName="piloto1"
+                autocomplete="null" placeholder="Primer Piloto">
+        </div>
+
+        <div class="mb-3">
+            <input type="text" class="form-control text-center celda" id="pais" formControlName="piloto2"
+                autocomplete="null" placeholder="Segundo Piloto">
+        </div>
+
+        <div class="mb-3 d-flex justify-content-center">
+            <button type="submit" [disabled]="telemetriaForm.invalid" class="btn button-49 " style="font-family:Formula1 Display Wide">GO</button>
+        </div>
+
+    
+
+    </form>
+</div>
+
+<div class="d-flex justify-content-center mt-5"> 
+
+<div id="imagen">
+
+    <img *ngIf="imgsrc" [src]="imgsrc" />
+
+</div>
+
+</div>

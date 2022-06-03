@@ -21,6 +21,8 @@ export class NavbarComponent implements OnInit {
   constructor(private setCookie: CookieService, private _snackBar: MatSnackBar, private router: Router, private authSrv: AuthServiceService) { }
 
   ngOnInit(): void {
+    
+    this.ifExistsCookies();
 
 
 this.authSrv.trigger.subscribe(
@@ -29,6 +31,13 @@ this.authSrv.trigger.subscribe(
     this.variable = data;
   });
 
+  }
+
+  ifExistsCookies(){
+    if (this.setCookie.check('token')) {
+      this.variable= true;
+
+    } 
   }
 
 

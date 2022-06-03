@@ -23,9 +23,10 @@ export class EstrategiaComponent implements OnInit {
   drivers: string[] = []
 
   tyres: string[] = []
+  pitStops: string[] = []
 
 
-  loading = true;
+  loading = false;
   grafica = false;
 
 
@@ -145,6 +146,15 @@ export class EstrategiaComponent implements OnInit {
 
       }
     )
+    this.pruebaService.getPitStops(year, gp,piloto1 ).subscribe(
+      res => {
+        this.pitStops = res.map((x: any) =>
+          x.duration
+        )
+        console.log(this.pitStops)
+      }
+    )
+
   }
 
   getStint() {

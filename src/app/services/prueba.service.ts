@@ -82,6 +82,10 @@ export class PruebaService {
     return this.http.get(this.url2 + '/capado');
   }
 
+  getPitStops( year: number, gp: string, code: string) : Observable<any> {
+    return this.http.get(this.url2 + '/boxes/' + year + '/' + gp + '/' + code);
+  }
+
 }
   
 

@@ -72,6 +72,16 @@
     <div *ngIf="!loading" class="img1">
       <img *ngIf="imgsrc"  [src]="imgsrc" />
     </div>
+
+    <div class="time">
+      <p style="color:whitesmoke">PIT STOPS TIME</p>
+      <div *ngIf="!loading" class="lista ">
+        <ul class=" listaHorizontal " style="color:antiquewhite !important" *ngFor="let x of pitStops">
+          <li >{{x}}</li>
+        </ul>
+      </div>
+
+    </div>
     
   </div>
 
@@ -87,6 +97,7 @@
       <div *ngIf="loading" class="loading" class="d-flex justify-content-center" style="padding-top:15%" >
         <mat-spinner color="warn" diameter="100" class="spinner"></mat-spinner>
       </div>
+
     
     
     

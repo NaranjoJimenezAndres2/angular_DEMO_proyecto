@@ -19,27 +19,27 @@
     <div class="mb-3 insideIcons ">
      
       <input type="text" class="form-control celda " id="year" *ngIf="variableAno" formControlName="year"
-        autocomplete="null" placeholder="Año del campeonato">
+        autocomplete="null" placeholder="Insert year">
         
         
         <i *ngIf="botton" (click)="obtenerYear()" class="fa fa-refresh fa-fw icon fa-1x" aria-hidden="true"
                     style="cursor:pointer"></i>
 
       <div class="text-danger" *ngIf="yearForm.get('year')?.hasError('required') && yearForm.get('year')?.touched">
-        <span><b>El año es requerido</b></span>
+        <span><b>Year is required</b></span>
       </div>         
       
 
       
 
 
-      <select formControlName="nombreCircuitos" *ngIf="variableCircuito" class="form-control celda">
-        <option value="" disabled selected >Seleccione un Circuito</option>
+      <select formControlName="nombreCircuitos" *ngIf="variableCircuito" class="form-control celda mt-2">
+        <option value="" disabled selected >Select a race</option>
         <option *ngFor="let x of nombre" [ngValue]="x">{{x}}</option>
       </select>
     </div>
     <div *ngIf="botton" class="mb-3">
-      <button type="submit"  [disabled] = "yearForm.invalid" class="button-49" style="margin-left:530px; font-family:Formula1 Display Wide">Enviar</button>
+      <button type="submit"  [disabled] = "yearForm.invalid" class="button-49" style="cursor:pointer; margin-left:530px; font-family:Formula1 Display Wide">Submit</button>
     </div>
   </form>
 

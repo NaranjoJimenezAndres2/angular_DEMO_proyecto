@@ -1,0 +1,28 @@
+.card2 {
+    background-color: darkred;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #03fe0cf6;
+    box-shadow: black 0px 0px 10px;
+    border-radius: 10px;
+    border-color: #131313;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    padding: 2%;
+    font-family: "Formula1 Display Wide";
+  }
+
+  .celda {
+    background-color: #323232;
+    color: greenyellow;
+    box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+    border-radius: 10px;
+    border-color: greenyellow;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-family: "Formula1 Display Wide";
+
+  
+  
+  }

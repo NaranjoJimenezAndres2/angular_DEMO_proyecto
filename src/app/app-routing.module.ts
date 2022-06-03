@@ -24,8 +24,8 @@ const routes: Routes = [
   { path: 'registrer' , component : RegistrerComponent},
   { path: 'prueba' , component : PruebaComponent, canActivate: [UserGuardGuard]},
   { path: '404-non-found', component : Error404Component},
-  { path: 'telemetria', component : TelemetriaComponent},
-  { path: 'estrategia', component: EstrategiaComponent }
+  { path: 'telemetria', component : TelemetriaComponent,  canActivate: [UserGuardGuard]},
+  { path: 'estrategia', component: EstrategiaComponent,  canActivate: [UserGuardGuard] }
 ];
 
 @NgModule({

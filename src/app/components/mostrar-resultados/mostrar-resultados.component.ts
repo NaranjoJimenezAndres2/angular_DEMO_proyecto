@@ -41,7 +41,7 @@ yearForm: FormGroup;
 
       this.yearForm = this.fb.group({
         year: ['',Validators.required],
-        nombreCircuitos: [null,Validators.required]
+        nombreCircuitos: ['',Validators.required]
 
      })
     }
