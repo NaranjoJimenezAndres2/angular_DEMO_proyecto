@@ -52,9 +52,9 @@ yearForm: FormGroup;
     const year = this.yearForm.value.year
     console.log(year)
     this.pruebaService.getCarrerasByYear(year).subscribe((circuitos: any) => {
-     // console.log(circuitos)
+      console.log(circuitos)
       this.nombreCircuitos = circuitos.map((x: any) =>
-        new nombreCircuitos(x.name)
+        new nombreCircuitos(x.name2)
         )
       console.log(this.nombreCircuitos)
       for (let i = 0; i < this.nombreCircuitos.length; i++) {  //paso de un JSON a un array simple
