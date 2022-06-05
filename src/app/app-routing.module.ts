@@ -17,16 +17,16 @@ import { EstrategiaComponent } from './components/estrategia/estrategia.componen
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'mapa' , component : MapaMostrarComponent},
-  { path: 'comparacionPilotos' , component : ComparacionPilotosComponent},
-  { path: 'carreras' , component : MostrarResultadosComponent},
-  { path: 'resutadoDetalle/:year/:circuitName/:driverId' , component : ResultadoDetalleComponent},
+  { path: 'map' , component : MapaMostrarComponent},
+  { path: 'drivers-comparisson' , component : ComparacionPilotosComponent},
+  { path: 'races' , component : MostrarResultadosComponent},
+  { path: 'result-details/:year/:circuitName/:driverId' , component : ResultadoDetalleComponent},
   { path: 'login' , component : LoginComponent},
   { path: 'registrer' , component : RegistrerComponent},
-  { path: 'prueba' , component : PruebaComponent, canActivate: [UserGuardGuard]},
+  { path: 'telemetry-options' , component : PruebaComponent, canActivate: [UserGuardGuard]},
   { path: '404-non-found', component : Error404Component},
-  { path: 'telemetria', component : TelemetriaComponent,  canActivate: [UserGuardGuard]},
-  { path: 'estrategia', component: EstrategiaComponent,  canActivate: [UserGuardGuard] }
+  { path: 'telemetry', component : TelemetriaComponent,  canActivate: [UserGuardGuard]},
+  { path: 'estrategy', component: EstrategiaComponent,  canActivate: [UserGuardGuard] }
 ];
 
 @NgModule({

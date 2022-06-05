@@ -102,7 +102,7 @@ reset() {
 
   openGoTo(year: string ,circuitName:string, driverId:string){
     const url = this.router.serializeUrl(
-      this.router.createUrlTree([`/resutadoDetalle/${year}/${circuitName}/${driverId}`]))
+      this.router.createUrlTree([`/result-details/${year}/${circuitName}/${driverId}`]))
     window.open(url, '_blank');
   }
 

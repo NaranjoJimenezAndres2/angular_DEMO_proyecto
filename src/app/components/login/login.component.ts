@@ -51,7 +51,6 @@ export class LoginComponent implements OnInit {
       //recibir el token jwt desde el servidor y continuar.
       (data: any) => {
         console.log(data);
-        debugger
         if (data != 'error') {
           this.cookieService.set('token', data);
           console.log(this.cookieService.get('token'));
