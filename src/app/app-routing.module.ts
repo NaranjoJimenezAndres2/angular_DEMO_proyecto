@@ -13,11 +13,10 @@ import { PruebaComponent } from './components/prueba/prueba.component';
 import { Error404Component } from './components/error404/error404.component';
 import { TelemetriaComponent } from './components/telemetria/telemetria.component';
 import { EstrategiaComponent } from './components/estrategia/estrategia.component';
-import { NavbarComponent } from './shared/navbar/navbar.component';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  {path: 'navbar', component: NavbarComponent},
   { path: 'mapa' , component : MapaMostrarComponent},
   { path: 'comparacionPilotos' , component : ComparacionPilotosComponent},
   { path: 'carreras' , component : MostrarResultadosComponent},

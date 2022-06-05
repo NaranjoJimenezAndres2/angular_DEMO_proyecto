@@ -38,8 +38,8 @@
         <option *ngFor="let x of nombre" [ngValue]="x">{{x}}</option>
       </select>
     </div>
-    <div *ngIf="botton" class="mb-3">
-      <button type="submit"  [disabled] = "yearForm.invalid" class="button-49" style="cursor:pointer; margin-left:530px; font-family:Formula1 Display Wide">Submit</button>
+    <div *ngIf="botton" class="mb-3 d-flex justify-content-center">
+      <button type="submit"  [disabled] = "yearForm.invalid" class="button-49" style="cursor:pointer; font-family:Formula1 Display Wide">Submit</button>
     </div>
   </form>
 
