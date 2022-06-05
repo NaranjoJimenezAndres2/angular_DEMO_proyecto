@@ -26,7 +26,8 @@ const routes: Routes = [
   { path: 'telemetry-options' , component : PruebaComponent, canActivate: [UserGuardGuard]},
   { path: '404-non-found', component : Error404Component},
   { path: 'telemetry', component : TelemetriaComponent,  canActivate: [UserGuardGuard]},
-  { path: 'estrategy', component: EstrategiaComponent,  canActivate: [UserGuardGuard] }
+  { path: 'estrategy', component: EstrategiaComponent,  canActivate: [UserGuardGuard] },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

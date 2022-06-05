@@ -6,21 +6,14 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PruebaService {
-  url = 'http://localhost:8000'; //django local
-  //url='https://app-django-datavisualization.herokuapp.com'; //django heroku
+  //url = 'http://localhost:8000'; //django local
+  url='https://app-django-datavisualization.herokuapp.com'; //django heroku
 
-  url2= 'http://localhost:3000'; //node local
-  //url2= 'https://app-backend-nodej.herokuapp.com'; //node heroku
+  //url2= 'http://localhost:3000'; //node local
+  url2= 'https://app-backend-nodej.herokuapp.com'; //node heroku
 
   constructor(private http: HttpClient) {}
 
-    getDjango(): Observable<any> {
-      return this.http.get(this.url + '/article');
-    }
-
-    getHeroes(): Observable<any> {
-      return this.http.get(this.url2);
-    }
 
     /*getMapa(id: number): Observable<any> {
       return this.http.get(this.url + '/map/' + id, { responseType: 'blob' });
