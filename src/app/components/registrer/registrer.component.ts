@@ -31,7 +31,7 @@ export class RegistrerComponent implements OnInit {
         [
           Validators.minLength(8),
           Validators.required,
-          Validators.pattern('((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,30})')
+          Validators.pattern('((?=.*?[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,30})')
         ]],
       _password2: ['', Validators.required],
       _fechaNacimiento: ['', Validators.required],
