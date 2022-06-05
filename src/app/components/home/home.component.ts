@@ -26,11 +26,13 @@ export class HomeComponent implements OnInit {
   }
 
   loadUserInfo() {
+    this.flag='';
     this.httpClient.get('https://jsonip.com/').subscribe(
       (data: any) => {
         this.userIp = data.ip;
+        console.log(this.userIp);
         //find out info about the user from the ip
-        this.httpClient.get('http://ip-api.com/json/' + this.userIp).subscribe(
+        this.httpClient.get('http://ip-api.com/json/').subscribe(
           (data: any) => {
             console.log(data);
             this.flag = 'assets/img/flags/' + data.countryCode.toLowerCase() + '.svg';
