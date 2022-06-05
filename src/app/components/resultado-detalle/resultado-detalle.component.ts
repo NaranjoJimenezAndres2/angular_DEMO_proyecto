@@ -86,6 +86,7 @@ export class ResultadoDetalleComponent implements OnInit {
       this.pruebaService.getResultadoDetalle(this.year, this.race,this.driverId).subscribe(
       res=> {
         console.log(res)
+        this.loading = false;
         this.carreraResultado = res;
         //console.log(this.carreraResultado)
       },
@@ -94,12 +95,13 @@ export class ResultadoDetalleComponent implements OnInit {
   }  
 
 }
+
 fakeloading(){
   this.loading = true;
   this.getResultadoDetalle()
-  setTimeout(() => {
+  /*setTimeout(() => {
     this.loading = false;
-    }, 2000);
+    }, 2000);*/
 }
 
 
