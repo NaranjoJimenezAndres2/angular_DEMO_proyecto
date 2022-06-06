@@ -35,6 +35,7 @@ export class TelemetriaComponent implements OnInit {
   }
 
   obtenerYear() {
+    this.nombre = []
     const year = this.telemetriaForm.value.year
     console.log(year)
     this.pruebaService.getCarrerasByYear(year).subscribe((circuitos: any) => {

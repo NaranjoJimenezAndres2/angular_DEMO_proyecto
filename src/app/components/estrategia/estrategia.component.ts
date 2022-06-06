@@ -56,7 +56,7 @@ export class EstrategiaComponent implements OnInit {
   yAxis: {
       min: 0,
       title: {
-          text: 'Total fruit consumption'
+          text: 'Laps'
       }
   },
   legend: {
@@ -90,6 +90,8 @@ export class EstrategiaComponent implements OnInit {
   }
 
   obtenerYear() {
+    this.nombre = []
+    this.nombreCircuitos = []
     const year = this.telemetriaForm.value.year
     console.log(year)
     this.pruebaService.getCarrerasByYear(year).subscribe((circuitos: any) => {
@@ -106,6 +108,7 @@ export class EstrategiaComponent implements OnInit {
   }
 
   obtenerPilotos() {
+    this.drivers = []
     const year = this.telemetriaForm.value.year
     this.pruebaService.getPilotos(year).subscribe((pilotos: any) => {
       this.drivers = pilotos.map((x: any) =>

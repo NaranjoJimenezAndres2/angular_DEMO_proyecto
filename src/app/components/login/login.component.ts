@@ -56,6 +56,11 @@ export class LoginComponent implements OnInit {
           console.log(this.cookieService.get('token'));
           this.authSrv.trigger.emit(this.var);
           this.router.navigate(['']);
+          this._snackBar.open('Login successful', 'Success', {
+            duration: 4000,
+            horizontalPosition: 'center',
+            verticalPosition: 'bottom'
+          });
         } else {
           this.error();
           this.formLogin.reset(); //limpiamos el formulario
