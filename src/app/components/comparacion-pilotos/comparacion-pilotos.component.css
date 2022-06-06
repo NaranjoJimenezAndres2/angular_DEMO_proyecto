@@ -1,5 +1,8 @@
 
+@media (max-width: 1400px) {
+  aside{position: absolute !important;}
 
+}
 
 /* CSS */
 .button-49,
